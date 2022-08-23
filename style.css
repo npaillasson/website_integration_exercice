@@ -70,3 +70,45 @@ body
     border-radius: 100%;
     background: #FFF500;
 }
+
+#top-frame
+{
+    border-bottom: 3px #FFF500 solid;
+    height: 15%;   
+    display: flex;
+    overflow: hidden;
+}
+
+#top-frame span
+{
+    white-space: nowrap;
+    font-size: 80px;
+    font-family: 'gtfxebl';
+    list-style-type: none;
+    animation: scrollTxt 18s linear infinite;
+}
+
+#top-frame span:nth-child(2n)
+{
+    color: #000431;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: yellow;
+}
+
+#top-frame span:nth-child(2n+1)
+{
+    color:  yellow;
+}
+
+@keyframes scrollTxt
+{
+    0%{
+        transofrm: translate(0, 0);
+    }
+    100%{
+        transform: translate(-100%, 0);
+    }
+}
+
+
+
