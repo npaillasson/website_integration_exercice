@@ -114,9 +114,9 @@ body
 #large_circle 
 {
     
-    right: 50%;
-    bottom: 50%;
-    transform: translate(50%, 50%);
+    right: 10%;
+    bottom: 25%;
+    /*transform: translate(50%, 50%);*/
     height: 70%;
     z-index: 1;
 }
