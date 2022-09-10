@@ -1,3 +1,5 @@
+@import "fontsheet.css";
+
 body
 {
     width: 100vw;
@@ -106,6 +108,7 @@ body
     position: absolute;
     border-radius: 50%;
     background: #FFF500;
+    aspect-ratio: 1 / 1;
 }
 
 #large_circle 
@@ -115,14 +118,15 @@ body
     bottom: 50%;
     transform: translate(50%, 50%);
     height: 70%;
-    aspect-ratio: 1 / 1;
-    max-height: 100%;
     z-index: 1;
 }
 
-#smal_circle
+#small_circle
 {
-
+    top: 75%;
+    right: 25%;
+    height: 10%;
+    z-index: 3;
 }
 
 #top-frame
