@@ -34,9 +34,11 @@ body
     font-size: 60px;
     font-family: 'gtfxebl';
     list-style-type: none;
-    animation: scrollh2 45s linear infinite;
+    animation: scrollh2 90s linear infinite;
     margin:  0;
+    align-items: center;
 }
+
 
 #mid-frame p:nth-child(n)
 {
@@ -64,6 +66,7 @@ body
 
 #image-box
 {
+    min-width: 50% ;
     height: 100%;
     aspect-ratio: 1 / 1;
     display: flex;
@@ -84,19 +87,22 @@ body
 .presentation
 {
     position: absolute;
-    bottom: 50%;
+    overflow: hidden;
+    /*bottom: 50%;
     right: 50%;
-    transform: translate(50%, 50%);
+    transform: translate(50%, 50%);*/
     font-family: 'gtfr';
     color:#FFF500;
     width: 65%;
+    height: 85%;
+    margin: 10% 17.5% 10% 17.5%;
 }
 
 #benjamin-img
 {  
     height: auto;
     width: auto;
-    max-width: 100%;
+    max-width: 95%;
     position: absolute;
     bottom: 0;
     z-index: 2;
@@ -113,11 +119,9 @@ body
 
 #large_circle 
 {
-    
     right: 10%;
     bottom: 25%;
-    /*transform: translate(50%, 50%);*/
-    height: 70%;
+    width: 60%;
     z-index: 1;
 }
 
@@ -125,7 +129,7 @@ body
 {
     top: 75%;
     right: 25%;
-    height: 10%;
+    width: 10%;
     z-index: 3;
 }
 
@@ -141,11 +145,25 @@ body
 {
     display: flex;
     white-space: nowrap;
-    font-size: 80px;
-    font-family: 'gtfxebo';
+    justify-content: center;
+    text-align: center;
+    font-family: 'gtfxebl';
     list-style-type: none;
-    animation: scrollh1 18s linear infinite;
+    animation: scrollh1 40s linear infinite;
     margin:  0;
+    align-items: center;
+}
+
+h1 p
+{
+    transform: translate(0, -10%);
+    font-size: 10vh;
+}
+
+h2 p
+{
+    transform: translate(0, -10%);
+    font-size: 7vh;
 }
 
 #top-frame p:nth-child(n)
@@ -156,7 +174,7 @@ body
 #top-frame p:nth-child(2n)
 {
     color: #000431;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke: 0.8px;
     -webkit-text-stroke-color: yellow;
 }
 
@@ -211,4 +229,86 @@ body
     padding-right: 10px;
     height: 30px;
     aspect-ratio: 1 / 1;
+}
+svg 
+{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+@media all and (max-width: 1024px)
+{
+    #content-frame
+    {
+        flex-direction: column-reverse;
+        overflow: auto;
+    }
+    #text-box 
+    {
+        height: 50%;
+    }
+    #benjamin-img
+    {  
+        height: auto;
+        width: auto;
+        max-width: 100%;
+        position: relative;
+        bottom: 0;
+        z-index: 2;
+        margin: 0;
+    }
+    #text-box
+    {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-self: flex-end;
+    }
+    #image-box
+    {
+        height: 50%;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #main-frame
+    {
+        height: 96%;
+        width: 96%;
+    }
+    .presentation
+    {
+        margin: 0;
+        height: 100%;
+        width: 80%;
+        transform: translate(15%, 0);
+    }
+    article p
+    {
+        text-align: justify;
+    }
+    .base_circle
+    {
+        border-radius: 50%;
+        background: #FFF500;
+        aspect-ratio: 1 / 1;
+    }
+    #large_circle 
+    { 
+        right: 35%;
+        bottom: 25%;
+        height: 85%;
+        width: auto;
+    }
+    #small_circle
+    {
+        top: 75%;
+        right: 40%;
+        height: 10%;
+        width: auto;
+    }
+    
 }
